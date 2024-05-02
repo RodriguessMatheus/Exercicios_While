@@ -77,17 +77,60 @@ programa deve continuar solicitando a senha até que o usuário insira a senha
 correta.
 """
 
-senha = input("Digite sua senha: ")
-
-sen = senha
-
-while senha == sen:
-  print("senha invalida")
-  senha = input("Digite sua senha valida: ")
-print("sucesso")
+senha = 666
+senha1 = input("Digite sua senha: ")
+while senha1 != senha:
+  senha1 = int(input("senha invalida, Digite sua senha: "))
+print("sucessso")
 
 """Escreva um programa que calcule a média de uma lista de números fornecida
 pelo usuário.
 """
 
-num = float()
+soma = 2
+contador = 0
+end = "fim"
+print("Digite os números (digite 'fim' para encerrar):")
+entrada = int(input("Número: "))
+while entrada != end:
+  entrada = input("numero: ")
+  soma += contador
+  contador += 1
+
+if contador > 0:
+  media = soma / contador
+  print("a media foi:", media)
+else:
+  print("invalido")
+
+"""Escreva um programa que solicite ao usuário que insira números até que ele
+insira o número 0. Em seguida, imprima a soma de todos os números inseridos.
+"""
+
+print("Digite os números (digite 0 para encerrar):")
+soma = 0
+numero = int(input("Número: "))
+while numero != 0:
+  soma += numero
+  numero = int(input("Número: "))
+print("A soma dos números inseridos é:", soma)
+
+"""Escreva um programa que solicite ao usuário que insira números até que ele
+insira um número negativo. Em seguida, imprima o maior número inserido.
+"""
+
+print("Digite os números (digite um número negativo para encerrar):")
+
+maior_numero = -9999999999
+
+numero = float(input("Número: "))
+
+while numero >= 0:
+    if numero > maior_numero:
+        maior_numero = numero
+    numero = float(input("Número: "))
+
+if maior_numero != -9999999999:
+    print("O maior número inserido foi:", maior_numero)
+else:
+    print("Nenhum número foi inserido.")
